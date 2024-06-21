@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    outline: 2px solid red;
+    outline: 2px solid red;  
   }
 
 body {
@@ -24,12 +24,17 @@ body {
     padding: 8px;
 }
 
+
+
 .recipe-box {
     height: 700px;
     width: 100%;
-    display: flex;
+    display: flex;    
+}
 
-    
+.text-box {
+    height: 400px;
+    margin: 15px;
 }
 
 .recipe-box .left, .recipe-box .middle, .recipe-box .right {
@@ -44,6 +49,7 @@ body {
     height: 700;
     align-items: center;
     justify-content: center;
+    background-color: rgb(249, 246, 241);
 }
 
 .recipe-box .middle img {
@@ -53,9 +59,10 @@ body {
 }
 
 .recipe-box .text-box {
-    padding: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     
-    padding-left: 20px;
 
     align-items: center;
     justify-content: center;
@@ -66,5 +73,30 @@ body {
 
 
 .recipe-box .text-box h1 {
-    font-family: , serif;
+    font-family: Futura, serif;
+    font-size: 45px;
+    margin: 10px;  
 }
+
+.btn {
+    padding: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    border: 1px solid #333333;
+    margin-top: 20px;
+    
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul {
+    list-style-type: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
