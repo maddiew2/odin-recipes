@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    outline: 2px solid red;  
+    /* outline: 2px solid red;       */
   }
 
 body {
@@ -20,11 +20,24 @@ body {
     border-bottom-color: rgba(63, 63, 63, 0.659);
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    align-items: center;;
+    align-items: center;
     padding: 8px;
+    
 }
 
-
+.header .right {
+    height: 64px;
+    width: 220px;
+    display: flex;
+    margin-left: 40px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: Futura, serif;
+    font-size: 10px;
+    letter-spacing: .1rem;
+    background-color: white;
+}
 
 .recipe-box {
     height: 700px;
@@ -32,7 +45,7 @@ body {
     display: flex;    
 }
 
-.text-box {
+.left .text-box {
     height: 400px;
     margin: 15px;
 }
@@ -44,12 +57,12 @@ body {
     justify-content: center;
 }
 
-
 .recipe-box .left {
     height: 700;
     align-items: center;
     justify-content: center;
-    background-color: rgb(249, 246, 241);
+    /* background-color: rgb(252, 252, 252); */
+    background-color: #F8F8F8;
 }
 
 .recipe-box .middle img {
@@ -58,45 +71,143 @@ body {
     object-fit:cover;
 }
 
-.recipe-box .text-box {
+.recipe-box .left .text-box {
     padding: 20px;
     display: flex;
     flex-direction: column;
     
-
     align-items: center;
     justify-content: center;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
 
-
-
-.recipe-box .text-box h1 {
+.recipe-box .left .text-box h1 {
     font-family: Futura, serif;
-    font-size: 45px;
+    font-size: 53px;
+    font-weight: 5;
     margin: 10px;  
 }
 
 .btn {
-    padding: 30px;
-    text-decoration: none;
-    color: black;
-    padding: 0.5rem;
-    border: 1px solid #333333;
-    margin-top: 20px;
-    
-  }
+    padding: 0.5rem 1.7rem;
+    text-decoration: none; /* Remove underline from link */
+    color: white; /* Text color */
+    background-color: rgb(22, 22, 22); /* Button background color */
+    border: 1px solid black;
+    border-radius: 50px; /* Create oval shape */
+    display: inline-block; /* Ensure proper spacing */
+    margin-top: 20px; /* Top margin */
+    text-align: center; /* Center the text */
+    font-size: 13px; /* Adjust font size as needed */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Required for positioning the pseudo-element */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    letter-spacing: .1rem;
+}
+
+.btn:hover {
+    color: black; /* Text color on hover */
+    background-color: white; /* Background color on hover */
+    border: 1px solid black; /* Border color on hover */
+}
+
+.btn::after {
+    content: ' \2192'; /* Unicode for right arrow */
+    margin-left: 8px; /* Space between text and arrow */
+    font-size: 1rem; /* Match the font size */
+    font-weight: 300; /* Thinner arrow */
+    transition: color 0.3s ease; /* Smooth transition for arrow color */
+}
+
+.btn:hover::after {
+    color: black; /* Arrow color on hover */
+}
+
   
-  .right {
+.right {
     display: flex;
     flex-direction: column;
-  }
+    background-color: #F8F8F8;
+    font-family: Futura, serif;
+}
 
-  ul {
-    list-style-type: none;
+  
+.right .text-box {
+    padding-left: 30px;
+    align-items: center;
+  
+}
+
+.right .text-box h1 {
+    font-size: 22px; 
+    font-weight: 50;
+}
+
+.right .text-box p {
+    font-size: 13px;
+    font-weight: 0; 
+}
+ 
+.R1, .R2, .R3 {
     flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    width:100%;
+    height:100%;
+    align-items: center; 
+}
+
+.right img {
+    padding-left: 20px;
+    height: 210px;
+    width: 185px;
+    margin: 0px;
+}
+
+/* -------------------- Brownie Page -------------------- */
+
+.brownies .container {
+    padding-left: 80px;
+    width: 780px;
+}
+
+.brownies h1 {
+    margin-top: 40px;
+    font-size: 45px;
+    font-family: Futura, serif;
+    font-weight: 1;
+    margin-bottom: 0;
+}
+
+.brownies h2 {
+    margin-top: 40px;
+    font-size: 25px;
+    font-family: Futura, serif;
+}
+
+.brownies p {
+    margin-bottom: 25px;
+}
+
+.brownies .recipe {
+    padding: 0.5rem 1.7rem;
+    text-decoration: none; /* Remove underline from link */
+    color: black; /* Text color */
+    background-color:#F8F8F8;
+    border-radius: 50px; /* Create oval shape */
+    display: inline-block; /* Ensure proper spacing */
+    margin-top: 0px; /* Top margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Required for positioning the pseudo-element */
+    margin-bottom: 80px;
+}
+
+.brownies .recipe h3 {
+    font-size: 25px;
+    font-family: Futura, serif;
+    font-weight: 1;
+}
+
+.brownies .recipe li {
+    margin: 20px;
+}
